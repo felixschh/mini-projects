@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # import your handwritten numbers (picture)
-pic = cv2.imread('/Users/felixschekerka/Desktop/mini-projects/hand_written_recognition/handwritten_numbers.png')
+pic = cv2.imread('./hand_written_recognition/handwritten_numbers.png')
 grey = cv2.cvtColor(pic, cv2.COLOR_BGR2GRAY)
 grey = cv2.resize(grey,(800,800))
 plt.figure(figsize = (2,2))

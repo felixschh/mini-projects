@@ -6,11 +6,11 @@ from matplotlib import figure
 
 plt.figure(figsize=(20,15))
 # green_screen = cv.imread('/Users/felixschekerka/Desktop/computer_vision/greenscreen.png')
-background = cv.imread('/Users/felixschekerka/Desktop/mini-projects/green_screen/mc_background.png')
+background = cv.imread('./green_screen/mc_background.png')
 background = cv.cvtColor(background, cv.COLOR_BGR2RGB)
 # dog = cv.imread('/Users/felixschekerka/Desktop/computer_vision/Computer Vision Course Resources/img/dog.jpg')
 # dog = cv.cvtColor(dog, cv.COLOR_BGR2RGB)
-mc_gs = cv.imread('/Users/felixschekerka/Desktop/mini-projects/green_screen/minecraft_greenscreen.png')
+mc_gs = cv.imread('./green_screen/minecraft_greenscreen.png')
 mc_gs = cv.cvtColor(mc_gs, cv.COLOR_BGR2RGB)
 
 
@@ -42,4 +42,6 @@ background_edit[mask == 0] = [0,0,0]
 
 merged_image = background_edit + masked_image #adding both arrays works like merging the 2 pictures
 
+plt.figure(figsize=(10, 8))
 plt.imshow(merged_image)
+plt.show()

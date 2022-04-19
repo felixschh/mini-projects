@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 #loading the image and changing color and 
-img = cv.imread('/Users/felixschekerka/Desktop/mini-projects/resources/img/3.jpg')
+img = cv.imread('./meme_generator/3.jpg')
 img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 img_grey = cv.cvtColor(img, cv.COLOR_RGB2GRAY)
 
